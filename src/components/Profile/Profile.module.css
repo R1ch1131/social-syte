@@ -1,0 +1,26 @@
+
+.profile {
+  grid-area: c;
+  background-color: rgb(240, 240, 240);
+  padding: 10px;
+ }
+
+.neAva{
+  height: 400px;
+  width: 950px;
+  padding-top: 10px; 
+  border-radius: 35px;
+  margin-left: 130px;
+}
+
+.ava {
+  width: 200px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-left: 90px;
+  
+}
+
+.item {
+  color: aquamarine;
+}

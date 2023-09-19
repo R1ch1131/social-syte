@@ -1,0 +1,43 @@
+
+.profile {
+  grid-area: c;
+  background-color: rgb(240, 240, 240);
+  padding: 10px;
+ }
+
+.neAva{
+  height: 400px;
+  width: 1010px;
+  padding-top: 10px; 
+  border-radius: 35px;
+  margin-left: 110px;
+}
+
+/* .ava {
+  width: 200px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-left: 90px;
+  
+} */
+
+.ava {
+  width: 125px;
+  border-radius: 15px;
+  margin-top: -95px;
+  margin-bottom: 100px;
+  margin-left: 155px;
+  border: outset;
+  border-width: 6px;
+}
+
+.item {
+  color: aquamarine;
+}
+
+.text {
+  margin-left: 330px;
+  color: rgb(255, 255, 255);
+  margin-top: -140px;
+
+}
