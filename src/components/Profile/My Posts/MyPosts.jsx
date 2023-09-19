@@ -7,7 +7,7 @@ let postData = [
   {post : 'it my first post', countLike: 45},
   {post : 'Hi', countLike: 13}, ]
 
-
+let postElement = postData.map(post => <Post message={post.post} countLike ={post.countLike}/>)
 
 const MyPosts = () => {
   return <div>
@@ -24,12 +24,11 @@ const MyPosts = () => {
     </div>
     <div>
       <div className={s.post}>
-      <Post message={postData[0].post} countLike ={postData[0].countLike}/>
+      {postElement}
       </div>
-      <div className={s.post}>
-      <Post message={postData[1].post} countLike ={postData[1].countLike}/>
-
-      </div>
+      {/* <div className={s.post}>
+      {postElement}
+      </div> */}
     </div>
   </div>
 

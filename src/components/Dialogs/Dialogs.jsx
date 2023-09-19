@@ -1,52 +1,34 @@
 import React from "react";
 import q from "./Dialogs.module.css";
-import { NavLink } from "react-router-dom";
+import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
 
-const DialogItemGl = (props) => {
-  return (<div className={q.dialog + ' ' + q.active}>
-  <NavLink to={"/dialogs/"+ props.name}>{props.name}</NavLink> 
-  </div>
-  )
-}
 
-const Message =(props) => {
-  return (
-    <div className={q.massage}>{props.message}</div>
-  )
-}
 let dialogsData = [
-      {name : 'Andrey'}, 
-      {name :'Sasha'},
-      {name : 'Nasty'}, 
-      {name :'Stasya'},
-      {name : 'Cola'},]
-
-let dialogElements = [
-        <DialogItemGl name={dialogsData[0].name} />,
-        <DialogItemGl name={dialogsData[1].name} />,
-        <DialogItemGl name={dialogsData[2].name} />,
-        <DialogItemGl name={dialogsData[3].name} />,
-        <DialogItemGl name={dialogsData[4].name} />
-]
+  { name: "Andrey" },
+  { name: "Sasha" },
+  { name: "Nasty" },
+  { name: "Stasya" },
+  { name: "Cola" },
+];
 
 let messageData = [
-      {message : 'Hi'}, 
-      {message :'How are yo?'},
-      {message : 'eah'}, 
-      {messages :'Yo'},
-      {message : 'REEEEEE'},]
+  { message: "Hi" },
+  { message: "How are yo?" },
+  { message: "eah" },
+  { messages: "Yo" },
+  { message: "REEEEEE" },
+];
+
+let dialogElements = dialogsData.map(dialog => (<DialogItem name={dialog.name} />));
+
+let messageElements = messageData.map(message => (<Message message={message.message} />));
 
 const Dialogs = () => {
   return (
     <div className={q.dialogs}>
-      <div className={q.dialogsItem}>
-        {dialogElements}
-      </div>
-      <div className={q.messages}>
-        <Message message={messageData[0].message} />
-        <Message message={messageData[1].message}/>
-        <Message message={messageData[2].message} />
-      </div>
+      <div className={q.dialogsItem}>{dialogElements}</div>
+      <div className={q.messages}>{messageElements}</div>
     </div>
   );
 };
